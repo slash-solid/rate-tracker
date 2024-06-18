@@ -1,0 +1,13 @@
+spring.config.import: optional:local.yml
+
+rates.providers:
+  - name: MonoBank
+    rates-url: https://api.monobank.ua/bank/currency
+    cache-expires-minutes: 60
+    adapter:
+      id: list
+      currency-properties:
+        base-code: currencyCodeB
+        counter-code: currencyCodeA
+        bid: rateBuy
+        ask: rateSell

@@ -1,0 +1,3 @@
+spring:
+  application.name: rate-tracker
+  data.mongodb.uri: ${RATE_TRACKER_MONGODB_URI}
